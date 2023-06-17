@@ -1,7 +1,8 @@
 package com.driver.models;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -10,4 +11,7 @@ public class User {
     private String password;
     private String firstName;
     private String lastName;
+    @OneToMany(mappedBy = "blog",cascade = CascadeType.ALL)
+    List<Blog> blogList=new ArrayList<>();
+
 }

@@ -11,4 +11,5 @@ public  class Image {
     private Integer id;
     private String description;
     private String dimensions;
+    private Blog blog;
 }
