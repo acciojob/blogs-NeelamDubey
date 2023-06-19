@@ -13,7 +13,7 @@ import java.util.List;
 public  class Blog {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer adminId;
+    private Integer Id;
     private String Title;
     private String content;
     @CreatedDate
@@ -31,12 +31,12 @@ public  class Blog {
         this.imageList = imageList;
     }
 
-    public Integer getAdminId() {
-        return adminId;
+    public Integer getId() {
+        return Id;
     }
 
-    public void setAdminId(Integer adminId) {
-        this.adminId = adminId;
+    public void setId(Integer adminId) {
+        this.Id = adminId;
     }
 
     public String getTitle() {
@@ -69,8 +69,6 @@ public  class Blog {
 
     public void setUser(User user) {
         this.user = user;
-    }
-    public Blog() {
     }
 
 }
